@@ -237,18 +237,9 @@ Status: Approved
 🧠 Note: You mentioned “copy and paste and update messages in false condition part.” For the Reject/Not Expensive branch, duplicate the email action and edit the wording accordingly.
 
 📐 Flow Summary (Demo 02)
-Trigger: When an item is created (SharePoint: Requests)
-  ├── Compose: Formatted_Cost = formatNumber(EstimatedCost,'$####,###,00')
-  ├── Send email (receipt) → RequesterEmail
-  └── Condition: Is Expensive?
-       ├── YES:
-       │    ├── Send email with options (To: Manager, Options: Approve,Reject)
-       │    └── Condition: SelectedOption == 'Approve' ?
-       │         ├── YES → Update item: Status = Approved; (Email requester: approved)
-       │         └── NO  → Update item: Status = Rejected; (Email requester: rejected)
-       └── NO:
-            ├── Update item: Status = Approved
-            └── (Email requester: auto-approved)
+
+<img width="727" height="303" alt="image" src="https://github.com/user-attachments/assets/84a27087-d874-429f-862f-07d41b14f503" />
+
 
 📨 Email Template (Plain Text Variant)
 Hello 
